@@ -1,0 +1,247 @@
+/*
+    Document   : category.css
+    Created on : Feb 8, 2026, 6:19:06 PM
+    Author     : Trần Minh Tuấn
+    NOTE: Separate CSS for category page to avoid conflicts with home_page.css
+*/
+
+/* ===== RESET (only if not already included) ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CATEGORY PAGE BODY ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff; /* White background like home page */
+    padding-top: 90px; /* Space for fixed navbar */
+    min-height: 100vh;
+}
+
+/* ===== CATEGORY FORM SECTION ===== */
+.form-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===== SECTION TITLE FOR CATEGORY ===== */
+.section-title {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe8f0 100%);
+    padding: 25px 30px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(255, 158, 183, 0.2);
+}
+
+.section-icon {
+    font-size: 28px;
+}
+
+.section-title span:nth-child(2) {
+    color: #ff85b3;
+    font-size: 24px;
+    font-weight: 700;
+    flex: 1;
+}
+
+/* ===== MODE INDICATOR ===== */
+.mode-indicator {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.mode-add {
+    background: #90EE90;
+    color: white;
+}
+
+.mode-update {
+    background: #ffc3d4;
+    color: white;
+}
+
+/* ===== CATEGORY FORM ===== */
+#categoryForm {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe8f0 100%);
+    padding: 40px 30px 30px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 20px rgba(255, 158, 183, 0.3);
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* ===== FORM LABEL ===== */
+.form-label {
+    display: block;
+    color: #ff85b3;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #ff6b9d;
+    font-size: 18px;
+    margin-left: 3px;
+}
+
+/* ===== FORM INPUTS ===== */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #ffe0ea;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #333;
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #ff85b3;
+    box-shadow: 0 0 0 4px rgba(255, 133, 179, 0.1);
+}
+
+.form-input:disabled {
+    background: #f8f8f8;
+    color: #aaa;
+    cursor: not-allowed;
+    border-color: #f0f0f0;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ===== HELPER TEXT ===== */
+.helper-text {
+    display: block;
+    margin-top: 6px;
+    color: #999;
+    font-size: 13px;
+}
+
+/* ===== BUTTON GROUP ===== */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    flex: 1;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 158, 183, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 158, 183, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: white;
+    color: #ff85b3;
+    border: 2px solid #ffc3d4;
+}
+
+.btn-secondary:hover {
+    background: #fff5f8;
+    border-color: #ff85b3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .form-section {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        padding: 20px 20px;
+        flex-wrap: wrap;
+    }
+
+    .section-title span:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .mode-indicator {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #categoryForm {
+        padding: 30px 20px 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title span:nth-child(2) {
+        font-size: 18px;
+    }
+
+    .section-icon {
+        font-size: 24px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 14px;
+    }
+}

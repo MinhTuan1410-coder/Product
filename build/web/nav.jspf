@@ -1,0 +1,62 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+<link rel="stylesheet" href="styleCss/home_page.css"/>
+<!-- Navigation Bar -->
+<nav>
+    <div class="nav-container">
+
+
+        <c:if test="${not empty sessionScope.user}">
+            <a href="home_page.jsp" class="logo">WelCome To ${sessionScope.user.account}</a>
+        </c:if>
+
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li class="dropdown">
+                <a href="#section1" class="dropbtn">Account ▼</a>
+                <div class="dropdown-content">
+                    <a href="${pageContext.request.contextPath}/Main?action=list&type=account">List Account</a>
+                    <a href="${pageContext.request.contextPath}/Main?action=add&type=account">Add new Account</a>                  
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#section2" class="dropbtn">Categories ▼</a>
+                <div class="dropdown-content">
+                    <a href="${pageContext.request.contextPath}/Main?action=list&type=category">List Categories</a>
+                    <a href="${pageContext.request.contextPath}/Main?action=add&type=category">Add new Category</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#section3" class="dropbtn">Products ▼</a>
+                <div class="dropdown-content">
+                    <a href="${pageContext.request.contextPath}/Main?action=list&type=product">List Products</a>
+                    <a href="${pageContext.request.contextPath}/Main?action=add&type=product">Add Product</a>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Avatar Dropdown -->
+        <div class="avatar-dropdown">
+            <img src="images/Capy.png" alt="User Avatar" class="avatar" id="avatar">
+            <div class="avatar-dropdown-content">
+
+                <c:if test="${empty sessionScope.user}">
+                    <a href="${pageContext.request.contextPath}/Login">Login</a>
+                </c:if>
+
+                <c:if test="${not empty sessionScope.user}">
+                    <a href="${pageContext.request.contextPath}/Logout" class="logout-link">Logout</a>
+                </c:if>
+
+
+            </div>
+        </div>
+    </div>
+</nav>

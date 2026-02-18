@@ -1,0 +1,164 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 5, 2026, 6:45:45 PM
+    Author     : Trần Minh Tuấn
+*/
+/* ===== RESET NHẸ ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== SECTION WRAPPER ===== */
+section {
+    padding: 120px 30px 40px; /* chừa navbar fixed */
+    display: flex;
+    justify-content: center;
+}
+
+section > div {
+    width: 92%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(255, 158, 183, 0.35);
+}
+
+/* ===== TITLE ===== */
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff85b3;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+/* ===== HEADER ===== */
+table th {
+    background: linear-gradient(135deg, #ffb3c6, #ff85b3);
+    color: white;
+    padding: 14px 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ===== BODY ===== */
+table td {
+    padding: 12px 10px;
+    text-align: center;
+    color: #555;
+    border-bottom: 1px solid #ffe0ea;
+}
+
+/* ===== ZEBRA ===== */
+table tr:nth-child(even) {
+    background-color: #fff5f8;
+}
+
+/* ===== HOVER ===== */
+table tr:hover {
+    background-color: #ffe6ee;
+    transition: background-color 0.25s ease;
+}
+
+/* ===== STATUS BADGE ===== */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+
+.status.active {
+    background: linear-gradient(135deg, #ff85b3, #ff6b9d);
+}
+
+.status.inactive {
+    background: linear-gradient(135deg, #ffb3c6, #ffa3b6);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btns {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* COMMON BUTTON */
+.btn {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(255, 158, 183, 0.35);
+}
+
+/* EDIT */
+.btn-edit {
+    background: linear-gradient(135deg, #ffb3c6, #ff85b3);
+}
+.btn-edit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 133, 179, 0.45);
+}
+
+/* DELETE */
+.btn-delete {
+    background: linear-gradient(135deg, #ff6b9d, #ff4d88);
+}
+.btn-delete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 77, 136, 0.45);
+}
+
+/* ACTIVE */
+.btn-active {
+    background: linear-gradient(135deg, #ff93a6, #ff6b9d);
+}
+.btn-active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 107, 157, 0.45);
+}
+
+/* DEACTIVE */
+.btn-deactive {
+    background: linear-gradient(135deg, #ffc3d4, #ffb3c6);
+    color: #ff4d88;
+}
+.btn-deactive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 179, 198, 0.45);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    section > div {
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        gap: 6px;
+    }
+}

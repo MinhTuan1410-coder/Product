@@ -1,0 +1,303 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 4, 2026, 2:01:48 PM
+    Author     : Trần Minh Tuấn
+*/
+
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 4, 2026, 1:12:20 PM
+    Author     : Trần Minh Tuấn
+*/
+
+*      /*
+    Home Page Style
+    Author: Trần Minh Tuấn
+*/
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff; /* 👈 TRẮNG TOÀN TRANG */
+}
+
+/* ===== NAVIGATION BAR ===== */
+nav {
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(255, 158, 183, 0.4);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    padding: 10px 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(255, 158, 183, 0.3);
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: #ff85b3;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffc3d4;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ===== AVATAR ===== */
+.avatar-dropdown {
+    position: relative;
+    margin-left: 20px;
+}
+
+.avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+/* ===== AVATAR DROPDOWN ===== */
+.avatar-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(255, 158, 183, 0.3);
+    border-radius: 8px;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.avatar-dropdown-content a {
+    color: #ff85b3;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.avatar-dropdown-content a:hover {
+    background-color: #ffc3d4;
+    color: #ffffff;
+}
+
+.avatar-dropdown-content .logout-link,
+.avatar-dropdown-content .login-link {
+    border-top: 1px solid #ffe0ea;
+    color: #ff6b9d;
+}
+
+.avatar-dropdown-content .logout-link:hover,
+.avatar-dropdown-content .login-link:hover {
+    background-color: #ff6b9d;
+    color: #ffffff;
+}
+
+.avatar-dropdown:hover .avatar-dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 50px; /* chừa nav */
+    background: #ffffff;
+}
+
+/* ===== CONTENT CARD ===== */
+.section-content {
+    max-width: 800px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 158, 183, 0.3);
+}
+
+.section-content h2 {
+    color: #ff85b3;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    color: #ff9fc6;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MOBILE MENU ===== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 4px 0;
+    border-radius: 3px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: #ffffff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(255, 158, 183, 0.3);
+        padding: 20px 0;
+    }
+
+    .nav-links a {
+        color: #ff85b3;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section-content {
+        padding: 30px;
+    }
+
+    .section-content h2 {
+        font-size: 28px;
+    }
+
+    .section-content p {
+        font-size: 16px;
+    }
+}
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+    scroll-behavior: smooth;
+}

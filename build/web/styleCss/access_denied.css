@@ -1,0 +1,212 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 12, 2026, 6:42:27 PM
+    Author     : Trần Minh Tuấn
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.denied-container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 10px 40px rgba(255, 107, 157, 0.3);
+    text-align: center;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.denied-icon {
+    font-size: 120px;
+    margin-bottom: 30px;
+    animation: shake 0.8s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+.denied-title {
+    color: #ff6b9d;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.denied-subtitle {
+    color: #ff85b3;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.denied-message {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.denied-details {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe8f0 100%);
+    border-left: 4px solid #ff85b3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.denied-details-title {
+    color: #ff85b3;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.denied-details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.denied-details-list li {
+    color: #666;
+    font-size: 14px;
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.denied-details-list li:before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: #ff6b9d;
+    font-weight: 700;
+}
+
+.denied-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.denied-btn {
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.denied-btn-primary {
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+    color: white;
+}
+
+.denied-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 158, 183, 0.5);
+}
+
+.denied-btn-secondary {
+    background: white;
+    color: #ff85b3;
+    border: 2px solid #ffc3d4;
+}
+
+.denied-btn-secondary:hover {
+    background: #fff5f8;
+    border-color: #ff85b3;
+}
+
+.denied-footer {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px solid #ffe0ea;
+}
+
+.denied-footer-text {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.denied-contact-link {
+    color: #ff85b3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.denied-contact-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .denied-container {
+        padding: 40px 30px;
+    }
+
+    .denied-icon {
+        font-size: 80px;
+    }
+
+    .denied-title {
+        font-size: 32px;
+    }
+
+    .denied-subtitle {
+        font-size: 20px;
+    }
+
+    .denied-buttons {
+        flex-direction: column;
+    }
+
+    .denied-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,269 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 11, 2026, 11:41:26 AM
+    Author     : Trần Minh Tuấn
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    padding-top: 90px;
+    min-height: 100vh;
+}
+
+nav {
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(255, 158, 183, 0.4);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background: #ff85b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Product List Styles */
+.product-list-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.product-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.product-list-title {
+    color: #ff85b3;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.product-add-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #90EE90 0%, #98FB98 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.product-filter-section {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe8f0 100%);
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 15px rgba(255, 158, 183, 0.2);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-filter-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.product-filter-label {
+    color: #ff85b3;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.product-filter-select,
+.product-search-input {
+    padding: 8px 15px;
+    border: 2px solid #ffe0ea;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.product-count-badge {
+    margin-left: auto;
+    color: #ffb3d1;
+}
+
+.product-list-card {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe8f0 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255, 158, 183, 0.3);
+    overflow: hidden;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table thead {
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+}
+
+.product-table th {
+    padding: 15px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+}
+
+.product-table tbody tr {
+    border-bottom: 1px solid #ffe0ea;
+}
+
+.product-table tbody tr:hover {
+    background-color: rgba(255, 195, 212, 0.1);
+}
+
+.product-table td {
+    padding: 15px;
+    color: #666;
+}
+
+.product-id-cell {
+    color: #ff85b3;
+    font-weight: 600;
+}
+
+.product-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #ffc3d4;
+}
+
+.product-thumb-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffe0ea 0%, #ffd0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.product-name-cell {
+    color: #333;
+    font-weight: 500;
+}
+
+.product-category-cell {
+    color: #ff85b3;
+    font-size: 13px;
+}
+
+.product-category-unit {
+    color: #ff85b3;
+    font-size: 13px;
+}
+.account {
+    color: #333;
+    font-weight: 500;
+}
+
+.product-price-cell {
+    font-weight: 600;
+}
+.product-price-cell {
+    font-weight: 600;
+}
+
+.product-discount-badge {
+    background: #ff6b9d;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.product-original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+}
+
+.product-action-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.product-btn-view,
+.product-btn-edit,
+.product-btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.product-btn-view {
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8F8 100%);
+}
+
+.product-btn-edit {
+    background: linear-gradient(135deg, #ffc3d4 0%, #ffb3c6 100%);
+}
+
+.product-btn-delete {
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff8ab3 100%);
+}
