@@ -285,7 +285,14 @@ public class ProductController extends HttpServlet {
     }
 
     public void filterProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int categoryId = Integer.parseInt(request.getParameter("category"));
+        int categoryId = 0;
+        try {
+            categoryId = Integer.parseInt(request.getParameter("category"));
+        } catch (Exception e) {
+            response.sendRedirect(request.getContextPath() + "/error_page.jsp");
+            return;
+        }
+
         List<ProductDto> products = new ArrayList<>();
         List<ProductDto> productsResult = new ArrayList<>();
 
