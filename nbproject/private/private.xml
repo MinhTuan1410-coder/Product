@@ -3,14 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/controller/ProductController.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/controller/CategoryController.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/controller/LoginController.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/model/Dao/AccountDao.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/model/Dao/ProductDao.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/controller/MainController.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/controller/LogoutController.java</file>
-            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/src/java/model/Dao/CategoryDao.java</file>
+            <file>file:/D:/FPT/Semester%204/PRJ301/FPT/ProductWS1/web/list_products.jsp</file>
         </group>
     </open-files>
 </project-private>

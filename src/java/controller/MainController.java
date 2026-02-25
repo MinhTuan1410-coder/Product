@@ -35,6 +35,7 @@ public class MainController extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
+        
         AccountDto account = (AccountDto) request.getSession().getAttribute("user");
         
         if (account == null) {
@@ -147,17 +148,17 @@ public class MainController extends HttpServlet {
         request.getRequestDispatcher("product").forward(request, response);
     }
 
-    //check if the user can manage accounts
+    //check user can manage accounts
     private boolean canManageAccounts(AccountDto a) {
         return Role.isAdmin(a.getRoleInSystem());
     }
 
-    //check if the user can manage products
+    //check user can manage products
     private boolean canManageProducts(AccountDto a) {
         return Role.isAdmin(a.getRoleInSystem()) || Role.isManager(a.getRoleInSystem());
     }
 
-    //check if the user can manage categoriess
+    //check user can manage categoriess
     private boolean canManageCategories(AccountDto a) {
         return Role.isAdmin(a.getRoleInSystem()) || Role.isManager(a.getRoleInSystem());
     }
